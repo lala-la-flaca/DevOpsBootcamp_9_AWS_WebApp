@@ -96,7 +96,7 @@ This demo project is part of **Module 9**: **AWS Services** from **Nana DevOps B
      ssh -i ~/.ssh/docker-server.pem ec2-user@13.59.163.202
    ```
    
-   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_9_AWS_WebApp/blob/main/Img/3%20ssh%20to%20ec2.PNG" width=800 />
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_9_AWS_WebApp/blob/main/Img/SSH%20ec2.png" width=800 />
    
 4. Update the package manager on the EC2 instance.
    
