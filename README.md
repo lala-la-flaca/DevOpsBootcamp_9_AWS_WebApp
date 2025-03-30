@@ -28,8 +28,7 @@ This demo project is part of **Module 9**: **AWS Services** from **Nana DevOps B
 
 ## ⚙️ Project Configuration:
 
-### Creating an AWS Admin Account
-### Create an AWS account
+### Creating an AWS Admin account
 1. Create an AWS account using a root user.
    
 2. Create an admin user using the IAM service.
