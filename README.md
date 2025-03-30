@@ -44,36 +44,144 @@ This demo project is part of Module 9: AWS Services from Nana DevOps Bootcamp. T
    
 ### Creating an EC2 Instance
 1. Navigate to EC2 and click on Launch Instance.
-2. Add a Name and a New Tag.
-3. Select the AWS Amazon Linux Image
-4. Select the instance type t2.micro.
-5. In the key pair login , create a Key pair login
-6. Add a key pair name, select the RSA type and use .pem file format if you are working with linux, create the Key pair.
-7. Add a security group, and named security-group docker-server, add the inboud rules to allow SSH access port 22, and source IP.
-8. The instance hs ben created.
 
+   <img src="" width=800 />
+  
+3. Enter a Name and create a New Tag.
+
+   <img src="" width=800 />
+  
+   
+5. Select the AWS Amazon Linux image.
+   
+   <img src="" width=800 />
+  
+7. Choose the t2.micro instance type.
+   
+   <img src="" width=800 />
+  
+9. Under Key Pair Login, create a new Key Pair.
+    
+   <img src="" width=800 />
+  
+11. Enter a Key Pair Name, select the RSA type, and choose the .pem format for Linux. Click Create Key Pair.
+    
+   <img src="" width=800 />
+  
+13. Save the pem file in a secure location.
+    
+   <img src="" width=800 />
+  
+15. Add a Security Group, name it security-group-docker-server, and configure inbound rules to allow SSH access on port 22 from a specified source IP.
+    
+   <img src="" width=800 />
+  
+17. The instance has been created.
+    
+   <img src="" width=800 />
+  
+   
 ### Installing Docker on EC2
-1. Copy the .pem file to the .ssh Linux folder as the .pem file contains the key to access AWS.
-2. Change the rights of the file to only provide read access to the user.
-3. SSH to EC2 providing the .PEM file as input.
-4. Update the package manager of the EC2
-5. Install Docker
-6. Verify the Docker version
-7. Start the Docker daemon.
-8. Add the current user to the docker group to avoid using the sudo every time a docker command I used and reset the connection.
+1. Copy the .pem file to the ~/.ssh folder in Linux, as it contains the key to access AWS.
+
+   ```bash
+   
+   ```
+   
+3. Modify .pem file permissions to grant read-only access to the user.
+   
+   ```bash
+   
+   ```
+   
+5. Connect to the EC2 instance via SSH using the .pem file.
+   
+   ```bash
+   
+   ```
+   
+7. Update the package manager on the EC2 instance.
+   
+   ```bash
+   
+   ```
+   
+9. Install Docker.
+    
+   ```bash
+   
+   ```
+   
+11. Verify the Docker version.
+    
+   ```bash
+   
+   ```
+   
+13. Start the Docker daemon.
+    
+   ```bash
+   
+   ```
+   
+15. Add the current user to the Docker group to eliminate the need for sudo when running Docker commands, then reset the connection.
+    
+   ```bash
+   
+   ```
+   
    
 
 ### Deploying Web Application
-1. Run docker login to login to the DockerHub repository
-2. Pull the App image from the Repository using docker pull.
-3. Verify that the docker image is available on the EC2
-4. Run the image in a detach mode
-5. Check that the container is running.
-6. Modify the inbound security group to allow access to port 3000 for the application, and navigate to the instance.
-7. Select the instance and click on the security tab.
-8. Click on the security group and edit the inbound rules.
-9. Add port 3000 to have access from everywhere.
-10. Open a browser and navigate to EC2 IP address:3000
+1. Run docker login to authenticate with the DockerHub repository.
+   
+   ```bash
+   
+   ```
+   <img src="" width=800 />
+   
+3. Pull the application image from the repository using docker pull <repository/image-name>.
+   
+   ```bash
+   
+   ```
+   <img src="" width=800 />
+   
+5. Verify that the Docker image is available on the EC2 instance using Docker images.
+   
+   ```bash
+   
+   ```
+   
+7. Run the image in detached mode using docker run -d -p 3000:3000 <image-name>.
+   
+   ```bash
+   
+   ```
+   <img src="" width=800 />
+   
+9. Check that the container is running using docker ps.
+    
+   ```bash
+   
+   ```
+   <img src="" width=800 />
+   
+11. Modify the inbound security group to allow access to port 3000 for the application:
+a) Navigate to the EC2 instance.
+b) Select the instance and click on the Security tab.
+c) Click on the Security Group, then edit the Inbound Rules.
+d) Add port 3000, allowing access from anywhere.
+    
+   <img src="" width=800 />
+   
+13. Open a browser and navigate to http://<EC2-IP>:3000 to access the application.
+    
+
+    [Web Application](http://13.59.163.202:3000/)
+  
+  
+    <img src="" width=800 />
 
 
    
