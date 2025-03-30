@@ -189,19 +189,19 @@ This demo project is part of **Module 9**: **AWS Services** from **Nana DevOps B
    
 6. Modify the inbound security group to allow access to port 3000 for the application:
    
-      a) Navigate to the EC2 instance.
+   a) Navigate to the EC2 instance.
     
-      b) Select the instance and click on the Security tab.
+   b) Select the instance and click on the Security tab.
     
-      c) Click on the Security Group, then edit the Inbound Rules.
+   c) Click on the Security Group, then edit the Inbound Rules.
     
-       <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_9_AWS_WebApp/blob/main/Img/19%20Modifying%20Security%20group%20one.png" width=800 />
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_9_AWS_WebApp/blob/main/Img/19%20Modifying%20Security%20group%20one.png" width=800 />
      
-      d) Add port 3000, allowing access from anywhere.
+   d) Add port 3000, allowing access from anywhere.
+
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_9_AWS_WebApp/blob/main/Img/21%20Adding%20%20New%20inbound%20rule.PNG" width=800 />
     
-       <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_9_AWS_WebApp/blob/main/Img/21%20Adding%20%20New%20inbound%20rule.PNG" width=800 />
-    
-7. Open a browser and navigate to http://<EC2-IP>:3000 to access the application.
+8. Open a browser and navigate to http://<EC2-IP>:3000 to access the application.
     
     [Web Application](http://13.59.163.202:3000/)
   
