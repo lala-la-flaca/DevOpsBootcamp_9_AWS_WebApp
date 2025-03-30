@@ -128,7 +128,7 @@ This demo project is part of **Module 9**: **AWS Services** from **Nana DevOps B
 
    <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_9_AWS_WebApp/blob/main/Img/8%20Starting%20docker%20daemon.png" width=800 />
    
-9. Verify that the Daemon is running
+8. Verify that the Daemon is running
 
     ```bash
       ps aux | grep docker
@@ -136,11 +136,10 @@ This demo project is part of **Module 9**: **AWS Services** from **Nana DevOps B
     
     <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_9_AWS_WebApp/blob/main/Img/9%20Checking%20tha%20docker%20is%20running%20dockerd.png" width=800 />
     
-10. Add the current user to the Docker group to eliminate the need for sudo when running Docker commands, then reset the connection.
-    
-   ```bash
+9. Add the current user to the Docker group to eliminate the need for sudo when running Docker commands, then reset the connection.
+    ```bash
      sudo usermod -aG docker $USER
-   ```
+    ```
 
    <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_9_AWS_WebApp/blob/main/Img/10%20Adding%20user%20to%20docker%20group.png" width=800 />
    
